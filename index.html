@@ -14,25 +14,6 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                    colors: {
-                        dark: '#1A0B2E', 
-                        card: '#281A3E',
-                    },
-                    backgroundImage: {
-                        'brand-gradient': 'linear-gradient(47.64deg, #F7E93F 0%, #FB09B4 50%, #9100F8 100%)',
-                    }
-                }
-            }
-        }
-    </script>
-
     <style>
         #mobile-menu {
             transition: transform 0.3s ease-in-out;
@@ -41,54 +22,103 @@
 </head>
 <body class="bg-dark text-white font-sans antialiased">
 
-    <header class="fixed w-full top-0 z-50 bg-dark/90 backdrop-blur-sm border-b border-white/10">
-        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+        <header class="fixed w-full top-0 z-50 bg-dark/90 backdrop-blur-sm border-b border-white/10">
+            <nav class="container mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+                
             
-            <div class="flex-shrink-0 cursor-pointer">
-                <h1 class="text-3xl font-bold">
-                    Tech<span class="text-transparent bg-clip-text bg-brand-gradient">Wave</span>
-                </h1>
-            </div>
+                <div class="flex-shrink-0 cursor-pointer">
+                        <h1 class="text-3xl font-bold text-white">
+                            Tech<span class="text-transparent bg-clip-text bg-[linear-gradient(47.64deg,#F7E93F_0%,#FB09B4_50%,#9100F8_100%)]">Wave</span>
+                        </h1>
+                    </div>
 
-            <ul class="hidden lg:flex items-center gap-10 text-gray-300 font-medium">
-                <li class="hover:text-white hover:bg-clip-text hover:text-transparent hover:bg-brand-gradient transition-all cursor-pointer">Home</li>
-                <li class="hover:text-white hover:bg-clip-text hover:text-transparent hover:bg-brand-gradient transition-all cursor-pointer">About</li>
-                <li class="hover:text-white hover:bg-clip-text hover:text-transparent hover:bg-brand-gradient transition-all cursor-pointer">Episodes</li>
-                <li class="hover:text-white hover:bg-clip-text hover:text-transparent hover:bg-brand-gradient transition-all cursor-pointer">Host</li>
-            </ul>
-
-            <div class="hidden lg:block">
-                <button class="bg-brand-gradient px-6 py-2.5 rounded-full font-bold text-white flex items-center gap-2 transform hover:scale-105 transition-transform duration-300 shadow-lg shadow-purple-500/20">
-                    <span>Subscribe</span>
-                    <i class="fa-solid fa-arrow-right"></i>
-                </button>
-            </div>
-
-            <div class="lg:hidden flex items-center">
-                <input type="checkbox" id="menu-toggle" class="peer hidden">
-                <label for="menu-toggle" class="text-2xl cursor-pointer text-white">
-                    <i class="fa-solid fa-bars"></i>
-                </label>
-
-                <div class="absolute top-20 left-0 w-full bg-dark border-b border-white/10 shadow-2xl origin-top transform scale-y-0 peer-checked:scale-y-100 transition-transform duration-300 ease-in-out">
-                    <ul class="flex flex-col p-6 gap-4 font-medium text-center">
-                        <li class="py-2 border-b border-white/5 hover:text-[#FB09B4]">Home</li>
-                        <li class="py-2 border-b border-white/5 hover:text-[#FB09B4]">About</li>
-                        <li class="py-2 border-b border-white/5 hover:text-[#FB09B4]">Episodes</li>
-                        <li class="py-2 hover:text-[#FB09B4]">Host</li>
-                        <li class="mt-4">
-                            <button class="bg-brand-gradient w-full py-3 rounded-full font-bold text-white flex justify-center items-center gap-2">
-                                <span>Subscribe</span>
-                            </button>
-                        </li>
+                    <ul class="hidden lg:flex items-center gap-10 text-gray-300 font-medium">
+                        <li class="hover:text-white hover:bg-clip-text hover:text-transparent hover:bg-[linear-gradient(47.64deg,#F7E93F_0%,#FB09B4_50%,#9100F8_100%)] transition-all cursor-pointer">Home</li>
+                        <li class="hover:text-white hover:bg-clip-text hover:text-transparent hover:bg-[linear-gradient(47.64deg,#F7E93F_0%,#FB09B4_50%,#9100F8_100%)] transition-all cursor-pointer">About</li>
+                        <li class="hover:text-white hover:bg-clip-text hover:text-transparent hover:bg-[linear-gradient(47.64deg,#F7E93F_0%,#FB09B4_50%,#9100F8_100%)] transition-all cursor-pointer">Episodes</li>
+                        <li class="hover:text-white hover:bg-clip-text hover:text-transparent hover:bg-[linear-gradient(47.64deg,#F7E93F_0%,#FB09B4_50%,#9100F8_100%)] transition-all cursor-pointer">Host</li>
                     </ul>
+
+                    <div class="hidden lg:block">
+                        <button class="bg-[linear-gradient(47.64deg,#F7E93F_0%,#FB09B4_50%,#9100F8_100%)] px-6 py-2.5 rounded-full font-bold text-white flex items-center gap-2 transform hover:scale-105 transition-transform duration-300 shadow-lg shadow-purple-500/20">
+                            <span>Subscribe</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+
+                    <div class="lg:hidden flex items-center">
+                        <input type="checkbox" id="menu-toggle" class="peer hidden">
+                        <label for="menu-toggle" class="text-2xl cursor-pointer text-white">
+                            <i class="fa-solid fa-bars"></i>
+                        </label>
+
+                        <div class="absolute top-20 left-0 w-full bg-[#1A0B2E]/40 backdrop-blur-mb border-b border-white/10 shadow-2xl origin-top transform scale-y-0 peer-checked:scale-y-100 transition-transform duration-300 ease-in-out">
+                            <ul class="flex flex-col p-6 gap-4 font-medium text-center text-white">
+                                <li class="py-2 border-b border-white/5 hover:text-[#FB09B4]">Home</li>
+                                <li class="py-2 border-b border-white/5 hover:text-[#FB09B4]">About</li>
+                                <li class="py-2 border-b border-white/5 hover:text-[#FB09B4]">Episodes</li>
+                                <li class="py-2 hover:text-[#FB09B4]">Host</li>
+                                <li class="mt-4">
+                                    <button class="bg-[linear-gradient(47.64deg,#F7E93F_0%,#FB09B4_50%,#9100F8_100%)] w-full py-3 rounded-full font-bold text-white flex justify-center items-center gap-2">
+                                        <span>Subscribe</span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
                 </div>
+
+            </nav>
+        </header>
+
+        <main class="relative min-h-screen pt-32 pb-20 overflow-hidden font-sans flex items-center justify-center">
+
+            <div class="absolute inset-0 z-0">
+                <img src="./assets/hero-bg.png" alt="Background" class="w-full h-full object-cover opacity-90">
+                <div class="absolute inset-0 bg-[#1A0B2E]/40 mix-blend-multiply"></div>
             </div>
 
-        </nav>
-    </header>
+            <div class="container mx-auto px-4 text-center relative z-10 flex flex-col items-center gap-6">
 
-    <main class="pt-24">
+                <div class="relative w-64 h-64 md:w-80 md:h-80 mt-10">
+            
+            <div class="w-full h-full rounded-full border-[1px] border-white/10 overflow-hidden  relative z-0">
+                <img src="./assets/hero-circle.png" alt="Podcast Cover" class="w-full h-full object-cover">
+            </div>
+
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-30 w-[130px] h-[130px] md:w-[200px] md:h-[200px] drop-shadow-2xl flex items-center justify-center">
+            <img src="./assets/microphone.png" alt="Microphone" class="w-full h-full object-contain">
+            </div>
+
+            <div class="absolute top-4 right-9 z-40 bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg">
+                New
+            </div>
+
+            <div class="absolute inset-0 bg-[#FB09B4] blur-[80px] opacity-40 -z-0"></div>
+        </div>
+        
+        <h1 class="text-5xl md:text-7xl font-bold leading-tight text-white">
+                    TechWave 
+                </h1>
+
+                <p class="text-gray-300 text-lg md:text-xl max-w-2xl">
+                    Your daily dose of tech insights, productivity hacks, and personal growth
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center gap-4 mb-12">
+                    
+                    <button class="px-8 py-3 rounded-full text-white bg-gradient-to-r from-[#F7E93F] via-[#FB09B4] to-[#9100F8] hover:scale-105 transition-transform flex items-center justify-center gap-2">
+                        <img src="./assets/spotify.png" alt="Spotify" class="w-6 h-6"> <p class="text-white text-lg md:text-xl">Listen on Spotify</p>
+                    </button>
+
+                    <button class="px-8 py-3 rounded-full text-white border border-green-500 hover:bg-white/10 transition-colors flex items-center justify-center gap-2">
+                        <img src="./assets/message.png" alt="Message" class="w-[20px] h-[16px]">
+                        <p class="text-green-500 text-lg md:text-xl">Subscribe</p>
+                    </button>
+
+                </div>
+
+            </div>
+
         </main>
 
     <footer>
