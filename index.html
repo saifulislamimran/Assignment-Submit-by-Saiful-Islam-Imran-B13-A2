@@ -3,37 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <title>TechWave - Podcast Website</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
 
-    <link rel="stylesheet" href="./styles/style.css">
-    <link rel="icon" href="./assets/location.png">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        dark: '#1A0B2E', 
+                        card: '#281A3E',
+                    },
+                    backgroundImage: {
+                        'brand-gradient': 'linear-gradient(47.64deg, #F7E93F 0%, #FB09B4 50%, #9100F8 100%)',
+                    }
+                }
+            }
+        }
+    </script>
 
-    <title>TechWave</title>
-
-
+    <style>
+        #mobile-menu {
+            transition: transform 0.3s ease-in-out;
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <nav class="container">
-            <div class="nav-logo">
-                    <h1>Tech<span class="highlight">Wave</span></h1>
+<body class="bg-dark text-white font-sans antialiased">
+
+    <header class="fixed w-full top-0 z-50 bg-dark/90 backdrop-blur-sm border-b border-white/10">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <div class="flex-shrink-0 cursor-pointer">
+                <h1 class="text-3xl font-bold">
+                    Tech<span class="text-transparent bg-clip-text bg-brand-gradient">Wave</span>
+                </h1>
             </div>
-            <ul class="menu-items">
-                <li>About</li>
-                <li>Episodes</li>
-                <li>Host</li>
+
+            <ul class="hidden lg:flex items-center gap-10 text-gray-300 font-medium">
+                <li class="hover:text-white hover:bg-clip-text hover:text-transparent hover:bg-brand-gradient transition-all cursor-pointer">Home</li>
+                <li class="hover:text-white hover:bg-clip-text hover:text-transparent hover:bg-brand-gradient transition-all cursor-pointer">About</li>
+                <li class="hover:text-white hover:bg-clip-text hover:text-transparent hover:bg-brand-gradient transition-all cursor-pointer">Episodes</li>
+                <li class="hover:text-white hover:bg-clip-text hover:text-transparent hover:bg-brand-gradient transition-all cursor-pointer">Host</li>
             </ul>
-            <button class="btn">
+
+            <div class="hidden lg:block">
+                <button class="bg-brand-gradient px-6 py-2.5 rounded-full font-bold text-white flex items-center gap-2 transform hover:scale-105 transition-transform duration-300 shadow-lg shadow-purple-500/20">
                     <span>Subscribe</span>
-                    <img src="./assets/ArrowRight.png" alt="">
-            </button>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+
+            <div class="lg:hidden flex items-center">
+                <input type="checkbox" id="menu-toggle" class="peer hidden">
+                <label for="menu-toggle" class="text-2xl cursor-pointer text-white">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+
+                <div class="absolute top-20 left-0 w-full bg-dark border-b border-white/10 shadow-2xl origin-top transform scale-y-0 peer-checked:scale-y-100 transition-transform duration-300 ease-in-out">
+                    <ul class="flex flex-col p-6 gap-4 font-medium text-center">
+                        <li class="py-2 border-b border-white/5 hover:text-[#FB09B4]">Home</li>
+                        <li class="py-2 border-b border-white/5 hover:text-[#FB09B4]">About</li>
+                        <li class="py-2 border-b border-white/5 hover:text-[#FB09B4]">Episodes</li>
+                        <li class="py-2 hover:text-[#FB09B4]">Host</li>
+                        <li class="mt-4">
+                            <button class="bg-brand-gradient w-full py-3 rounded-full font-bold text-white flex justify-center items-center gap-2">
+                                <span>Subscribe</span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
         </nav>
     </header>
-    
+
+    <main class="pt-24">
+        </main>
+
+    <footer>
+        </footer>
+
 </body>
 </html>
