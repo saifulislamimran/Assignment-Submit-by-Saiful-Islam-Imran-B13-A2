@@ -36,38 +36,36 @@
       <nav
         class="container mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between"
       >
-        <div class="flex-shrink-0 cursor-pointer">
+        <a href="#" class="flex-shrink-0 cursor-pointer">
           <h1 class="text-3xl font-bold text-white">
             Tech<span
               class="text-transparent bg-clip-text bg-[linear-gradient(47.64deg,#F7E93F_0%,#FB09B4_50%,#9100F8_100%)]"
               >Wave</span
             >
           </h1>
-        </div>
+        </a>
 
         <ul
           class="hidden lg:flex items-center gap-10 text-gray-300 font-medium"
         >
-          <li
-            class="hover:text-white hover:bg-clip-text hover:text-transparent hover:bg-[linear-gradient(47.64deg,#F7E93F_0%,#FB09B4_50%,#9100F8_100%)] transition-all cursor-pointer"
-          >
-            Home
-          </li>
-          <li
+          <a
+            href="#about"
             class="hover:text-white hover:bg-clip-text hover:text-transparent hover:bg-[linear-gradient(47.64deg,#F7E93F_0%,#FB09B4_50%,#9100F8_100%)] transition-all cursor-pointer"
           >
             About
-          </li>
-          <li
+          </a>
+          <a
+            href="#episodes"
             class="hover:text-white hover:bg-clip-text hover:text-transparent hover:bg-[linear-gradient(47.64deg,#F7E93F_0%,#FB09B4_50%,#9100F8_100%)] transition-all cursor-pointer"
           >
             Episodes
-          </li>
-          <li
+          </a>
+          <a
+            href="#host"
             class="hover:text-white hover:bg-clip-text hover:text-transparent hover:bg-[linear-gradient(47.64deg,#F7E93F_0%,#FB09B4_50%,#9100F8_100%)] transition-all cursor-pointer"
           >
             Host
-          </li>
+          </a>
         </ul>
 
         <div class="hidden lg:block">
@@ -91,16 +89,20 @@
             <ul
               class="flex flex-col p-6 gap-4 font-medium text-center text-white"
             >
-              <li class="py-2 border-b border-white/5 hover:text-[#FB09B4]">
-                Home
-              </li>
-              <li class="py-2 border-b border-white/5 hover:text-[#FB09B4]">
+              <a
+                href="#about"
+                class="py-2 border-b border-white/5 hover:text-[#FB09B4]"
+              >
                 About
-              </li>
-              <li class="py-2 border-b border-white/5 hover:text-[#FB09B4]">
+              </a>
+              <a
+                href="#episodes"
+                class="py-2 border-b border-white/5 hover:text-[#FB09B4]"
+              >
                 Episodes
-              </li>
-              <li class="py-2 hover:text-[#FB09B4]">Host</li>
+              </a>
+              <a href="#host" class="py-2 hover:text-[#FB09B4]">Host</a>
+
               <li class="mt-4">
                 <button
                   class="bg-[linear-gradient(47.64deg,#F7E93F_0%,#FB09B4_50%,#9100F8_100%)] w-full py-3 rounded-full font-bold text-white flex justify-center items-center gap-2 transform hover:scale-105 transition-transform duration-300 shadow-lg shadow-purple-500/20"
@@ -196,7 +198,10 @@
         </div>
       </section>
 
-      <section class="py-20 bg-[#1A0B2E] text-white relative overflow-hidden">
+      <section
+        id="about"
+        class="py-20 bg-[#1A0B2E] text-white relative overflow-hidden"
+      >
         <div class="container mx-auto px-4">
           <div
             class="flex flex-col gap-8 justify-center items-center text-center max-w-4xl mx-auto"
@@ -379,7 +384,7 @@
           </div>
         </div>
       </section>
-      <section class="py-20 bg-[#1A0B2E] text-white relative">
+      <section id="episodes" class="py-20 bg-[#1A0B2E] text-white relative">
         <div class="container mx-auto px-4">
           <div class="text-center mb-16">
             <h2 class="text-3xl md:text-5xl font-bold">Featured Episodes</h2>
@@ -528,7 +533,7 @@
             </div>
           </div>
 
-          <div class="mt-32">
+          <div id="host" class="mt-32">
             <div class="text-center mb-16">
               <h2 class="text-3xl md:text-5xl font-bold">Meet The Host</h2>
             </div>
@@ -600,7 +605,7 @@
     </main>
 
     <footer
-      class="bg-[#1A0B2E] pt-20 pb-10 text-white relative overflow-hidden border-t border-white/5"
+      class="bg-[#1A0B2E]/90 pt-20 pb-10 text-white relative overflow-hidden border-t border-white/5"
     >
       <div class="absolute inset-0 z-0 pointer-events-none">
         <img
